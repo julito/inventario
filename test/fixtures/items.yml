@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  descripcion: MyString
+  grupo_id: 1
+
+two:
+  descripcion: MyString
+  grupo_id: 1

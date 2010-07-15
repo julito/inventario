@@ -1,0 +1,35 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  area_id: 1
+  codigo_old: MyString
+  codigo_new: MyString
+  item_id: 1
+  marca_id: 1
+  color_id: 1
+  modelo: MyString
+  serie: MyString
+  estado_id: 1
+  fecha_adq: 2010-07-15
+  costo: 9.99
+  fecha_valoracion: 2010-07-15
+  valoracion_inicial: 9.99
+  valoracion_actual: 9.99
+  observaciones: MyString
+
+two:
+  area_id: 1
+  codigo_old: MyString
+  codigo_new: MyString
+  item_id: 1
+  marca_id: 1
+  color_id: 1
+  modelo: MyString
+  serie: MyString
+  estado_id: 1
+  fecha_adq: 2010-07-15
+  costo: 9.99
+  fecha_valoracion: 2010-07-15
+  valoracion_inicial: 9.99
+  valoracion_actual: 9.99
+  observaciones: MyString

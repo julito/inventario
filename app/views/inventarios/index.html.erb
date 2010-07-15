@@ -1,0 +1,48 @@
+<h1>Listing inventarios</h1>
+
+<table>
+  <tr>
+    <th>Area</th>
+    <th>Codigo old</th>
+    <th>Codigo new</th>
+    <th>Item</th>
+    <th>Marca</th>
+    <th>Color</th>
+    <th>Modelo</th>
+    <th>Serie</th>
+    <th>Estado</th>
+    <th>Fecha adq</th>
+    <th>Costo</th>
+    <th>Fecha valoracion</th>
+    <th>Valoracion inicial</th>
+    <th>Valoracion actual</th>
+    <th>Observaciones</th>
+  </tr>
+
+<% @inventarios.each do |inventario| %>
+  <tr>
+    <td><%=h inventario.area_id %></td>
+    <td><%=h inventario.codigo_old %></td>
+    <td><%=h inventario.codigo_new %></td>
+    <td><%=h inventario.item_id %></td>
+    <td><%=h inventario.marca_id %></td>
+    <td><%=h inventario.color_id %></td>
+    <td><%=h inventario.modelo %></td>
+    <td><%=h inventario.serie %></td>
+    <td><%=h inventario.estado_id %></td>
+    <td><%=h inventario.fecha_adq %></td>
+    <td><%=h inventario.costo %></td>
+    <td><%=h inventario.fecha_valoracion %></td>
+    <td><%=h inventario.valoracion_inicial %></td>
+    <td><%=h inventario.valoracion_actual %></td>
+    <td><%=h inventario.observaciones %></td>
+    <td><%= link_to 'Show', inventario %></td>
+    <td><%= link_to 'Edit', edit_inventario_path(inventario) %></td>
+    <td><%= link_to 'Destroy', inventario, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New inventario', new_inventario_path %>

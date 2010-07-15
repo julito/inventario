@@ -1,0 +1,28 @@
+  304  sudo apt-get install git-core git-doc   #tiene que ser version superior a 1.6.02
+  306  git --version
+  307  git config --global user.name "julio ponce"
+  308  git config --global user.email "jcponce@gmail.com"
+  309  git config --global --list
+  310  git config --global color.ui "auto"
+  311  git help
+  312  git help commit
+  313  cd .ssh
+  314  ls
+  316  ssh-keygen -t rsa -C "jcponce87@gmail.com"
+  317  ls
+  318  cat id_rsa.pub 
+  319  cd
+  320  cd pruebas_ruby/
+  321  mkdir proyecto_git
+  322  cd proyecto_git/
+  323  rails inventario
+  324  ls
+  325  cd inventario/
+  326  git init
+  327  ls
+  328  ls -a
+  329  git add .
+  330  git commit -m "generado pricipio proyecto"
+  331  git remote add origin git@github.com:julito/inventario.git
+  332  git push origin master
+  333  history >crear-GIT
