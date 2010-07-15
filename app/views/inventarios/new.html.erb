@@ -5,7 +5,9 @@
 
   <p>
     <%= f.label :area_id %><br />
-    <%= f.text_field :area_id %>
+    <%= @areas = Area.find(:all, :order => "descripcion")
+        f.collection_select(:area_id, @areas, :id, :descripcion)
+    %>
   </p>
   <p>
     <%= f.label :codigo_old %><br />
