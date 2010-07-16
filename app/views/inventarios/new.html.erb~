@@ -1,6 +1,6 @@
 <h1>New inventario</h1>
 
-<% form_for(@inventario, :html => {:multipart => true}) do |f| %>
+<% form_for(@inventario) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -66,7 +66,10 @@
     <%= f.text_field :observaciones %>
   </p>
   <%= label :inventario, :foto %>    
-  
+    <!-- #END:start -->
+    <%= foto_for @inventario, :small %>
+    <br />
+    <!-- #START:start -->
     <%= file_field_tag :foto_file %>
     <span class="hint">
       We accept JPEG, GIF, or PNG files up to 500 KB.

@@ -39,18 +39,11 @@ class InventariosController < ApplicationController
 
   # POST /inventarios
   # POST /inventarios.xml
-  
   def create
     @inventario = Inventario.new(params[:inventario])
-    @foto = Foto.new(:uploaded_data => params[:foto_file])
-    puts "vvvvvvvvvvvvvvv"
-    p params[:foto_file]
-    p @foto
-    puts "xxxxxxxxxxxxxxxxx"
-    @service = InventarioService.new(@inventario, @foto)
 
     respond_to do |format|
-	if @service.save
+      if @inventario.save
         format.html { redirect_to(@inventario, :notice => 'Inventario was successfully created.') }
         format.xml  { render :xml => @inventario, :status => :created, :location => @inventario }
       else
@@ -64,22 +57,17 @@ class InventariosController < ApplicationController
   # PUT /inventarios/1.xml
   def update
     @inventario = Inventario.find(params[:id])
-    @foto = @inventario.foto
-    
-    @service = InventarioService.new(@inventario, @foto)
-    respond_to do |format|
 
-   if @inventario.update_attributes(params[:inventario],params[:foto_file])
+    respond_to do |format|
+      if @inventario.update_attributes(params[:inventario])
         format.html { redirect_to(@inventario, :notice => 'Inventario was successfully updated.') }
         format.xml  { head :ok }
       else
-	      @foto = @service.foto
         format.html { render :action => "edit" }
         format.xml  { render :xml => @inventario.errors, :status => :unprocessable_entity }
       end
     end
   end
-  
 
   # DELETE /inventarios/1
   # DELETE /inventarios/1.xml

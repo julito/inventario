@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100715163924) do
+ActiveRecord::Schema.define(:version => 20100716165610) do
 
   create_table "areas", :force => true do |t|
     t.string   "descripcion"
@@ -25,6 +25,19 @@ ActiveRecord::Schema.define(:version => 20100715163924) do
 
   create_table "estados", :force => true do |t|
     t.string   "descripcion"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "fotos", :force => true do |t|
+    t.integer  "inventario_id"
+    t.integer  "parent_id"
+    t.integer  "size"
+    t.integer  "width"
+    t.integer  "height"
+    t.string   "content_type"
+    t.string   "filename"
+    t.string   "thumbnail"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
