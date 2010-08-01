@@ -21,6 +21,7 @@
 
 <% @inventarios.each do |inventario| %>
   <tr>
+	<td><%= foto_for(inventario, :large) %></td>
     <td><%=h inventario.area_id %></td>
     <td><%=h inventario.codigo_old %></td>
     <td><%=h inventario.codigo_new %></td>
